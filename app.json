@@ -1,0 +1,36 @@
+{
+  "name": "my proj",
+  "description": "lol.",
+  "keywords": [
+    "none"
+  ],
+
+  "env": {
+    "SECRET_TOKEN": {
+      "description": "ss",
+      "generator": "secret"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "image": "heroku/ruby",
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "9.5"
+      }
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/amivin/aria2-heroku.git"
+    },
+    { "url": "https://github.com/heroku/heroku-buildpack-nodejs#v83"
+    }
+  ]
+}
